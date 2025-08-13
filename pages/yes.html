@@ -24,17 +24,22 @@
         document.addEventListener("DOMContentLoaded", () => {
             const music = document.getElementById("bgMusic");
 
-            // Try to play automatically (may be blocked on iPhone)
             music.play().catch(() => {
-                // If blocked, show a one-time play button
+                // Create fullscreen button
                 let btn = document.createElement("button");
                 btn.textContent = "Tap to play music 🎵";
                 btn.style.position = "fixed";
-                btn.style.top = "50%";
-                btn.style.left = "50%";
-                btn.style.transform = "translate(-50%, -50%)";
-                btn.style.padding = "10px 20px";
-                btn.style.fontSize = "18px";
+                btn.style.top = "0";
+                btn.style.left = "0";
+                btn.style.width = "100vw";
+                btn.style.height = "100vh";
+                btn.style.fontSize = "24px";
+                btn.style.background = "rgba(0, 0, 0, 0.8)";
+                btn.style.color = "#fff";
+                btn.style.border = "none";
+                btn.style.cursor = "pointer";
+                btn.style.zIndex = "9999";
+
                 document.body.appendChild(btn);
 
                 btn.addEventListener("click", () => {
