@@ -1,0 +1,36 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+
+body {
+    font-family: 'Pixelify Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('../assests/background-img.png');
+    background-size: cover;
+}
+
+.custom-btn1 {
+    background-color: #f5b4c4 ; 
+    border: 3px solid #eb708f ;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.wrapper-main {
+    text-align: center;
+    transform: translateY(-43%);
+    
+    
+}
+
+@media (max-width: 600px) {
+}
