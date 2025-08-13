@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hbd airaaa</title>
     <link rel="stylesheet" href = "yes.css">
@@ -20,14 +22,19 @@
     <audio playsinline="true" id="bgMusic" loop  src="../assests/pepe pet.mp3"></audio>
 
     <script>
-        window.addEventListener('DOMContentLoaded', () => {
-            if (localStorage.getItem('playMusic') === 'true') {
-                document.getElementById('bgMusic').play();
-                localStorage.removeItem('playMusic')
-            }
-        });
+        let mySound;
 
+        function preload() {
+            noCanvas();
+
+            document.getElementById('bgMusic').addEventListener('click', () => {
+                if (!mysound.isPlaying()) {
+                    mySound.loop();
+                }
+            }
+        }
     </script>
 </body>
 
 </html>
+
