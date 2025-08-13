@@ -1,0 +1,51 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+
+body {
+    font-family: 'Pixelify Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('../assets/background-img.png');
+    background-size: cover;
+}
+
+.wrapper-main {
+    text-align: center;
+    transform: translateY(-30%);
+    
+    
+}
+.confetti {
+    position: fixed;  /* or fixed */
+    top: 20px;            /* distance from top */
+    left: 20px;           /* distance from left */
+    z-index: 100;         /* higher = more on top */
+    width: 100%;       /* Full width */
+    height: 100%;      /* Full height */
+    object-fit: cover; /* Scale & crop to fill */
+}
+
+h1 {
+    background-color: rgba(0, 0, 0, 0.2);
+    display: inline;
+    padding: 0px 2px;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+.aira-chibi {
+    display: block;
+    height: auto;
+    width: 55%;
+    transform: translateX(45%);
+}
+
+
+@media (max-width: 600px) {
+}

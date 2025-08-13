@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hbd airaaa</title>
+    <link rel="stylesheet" href="yes.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper-main">
+        <img class="aira-chibi" src="../assets/chibi-aira-petting.gif">
+        <h1>yess kamu spesiall, meski belum merasa tapi kamu sangatt spesial bagi orang disekitarmuu :D</h1>
+    </div>
+    <img class="confetti" src="../assets/confetti-sticker.gif">
+
+    <audio id="bgMusic" loop>
+        <source src="../assets/pepe_pet.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const music = document.getElementById("bgMusic");
+
+            // Try to play automatically (may be blocked on iPhone)
+            music.play().catch(() => {
+                // If blocked, show a one-time play button
+                let btn = document.createElement("button");
+                btn.textContent = "Tap to play music 🎵";
+                btn.style.position = "fixed";
+                btn.style.top = "50%";
+                btn.style.left = "50%";
+                btn.style.transform = "translate(-50%, -50%)";
+                btn.style.padding = "10px 20px";
+                btn.style.fontSize = "18px";
+                document.body.appendChild(btn);
+
+                btn.addEventListener("click", () => {
+                    music.play();
+                    btn.remove();
+                });
+            });
+        });
+    </script>
+</body>
+</html>
