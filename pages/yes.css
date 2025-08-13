@@ -25,7 +25,7 @@ body {
     position: fixed;  /* or fixed */
     top: 20px;            /* distance from top */
     left: 20px;           /* distance from left */
-    z-index: 100;         /* higher = more on top */
+    z-index: 99;         /* higher = more on top */
     width: 100%;       /* Full width */
     height: 100%;      /* Full height */
     object-fit: cover; /* Scale & crop to fill */
@@ -48,4 +48,5 @@ h1 {
 
 
 @media (max-width: 600px) {
+
 }
